@@ -16,10 +16,15 @@ body {
 
 }
 
-box {
+.box {
     border: 6px solid white;
     transition: 0.25s ease;
     padding: 10px;
+    background: black;
+}
 
-
+p {
+    visibility: hidden;
+    width: 240px;
+    margin: 10px auto 0;
 }
