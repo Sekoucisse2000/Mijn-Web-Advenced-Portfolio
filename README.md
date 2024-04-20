@@ -4,3 +4,8 @@ Web advenced portfolio
 
  https://www.w3schools.com/js/js_htmldom_elements.asp 
  https://www.w3schools.com/js/js_htmldom_html.asp
+
+
+
+Om Event aan een element koppelen:
+https://www.w3schools.com/cssref/pr_class_visibility.php
