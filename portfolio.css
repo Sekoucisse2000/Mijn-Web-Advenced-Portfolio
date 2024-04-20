@@ -1,3 +1,25 @@
 h1 {
     font-size: 3rem;
 }
+
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style: none;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    color: white;
+    min-height: 200vh;
+
+}
+
+box {
+    border: 6px solid white;
+    transition: 0.25s ease;
+    padding: 10px;
+
+
+}
