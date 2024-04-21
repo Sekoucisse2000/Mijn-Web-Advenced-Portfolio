@@ -8,11 +8,11 @@ h1 {
     list-style: none;
 }
 
-body {
+.box {
     text-align: center;
     margin: 0;
     color: white;
-    min-height: 200vh;
+    min-height: 30vh;
 
 }
 

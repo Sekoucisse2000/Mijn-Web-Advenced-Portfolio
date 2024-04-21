@@ -5,6 +5,7 @@ mijnhoofttittle.style.textAlign = " center";
 mijnhoofttittle.style.fontFamily = "Georgia, Times, 'Times New Roman', serif"
 mijnhoofttittle.innerText = " Mijn Portfolio van Web Advenced "
 
+//------------------------------------------------------------------------------------
 
 const mijnvraag = document.querySelector(".klik-event");
 const btn1 = document.getElementById("btn-1");
@@ -25,3 +26,21 @@ btn2.addEventListener("click", () => {
     antwoord.style.visibility = "visible";
     antwoord.style.background = "red";
 });
+
+//------------------------------------------------------------------------------------
+const usernaam = document.getElementById("usernaam");
+const email = document.getElementById("email");
+const paaswoord = document.getElementById("paaswoord");
+const submit = document.getElementById("submit");
+const errorblock = document.getElementById("errors");
+
+
+
+
+
+
+
+
+
+
+
