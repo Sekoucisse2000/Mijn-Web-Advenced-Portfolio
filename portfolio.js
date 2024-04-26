@@ -34,8 +34,27 @@ const paaswoord = document.getElementById("paaswoord");
 const submit = document.getElementById("submit");
 const errorblock = document.getElementById("errors");
 
-
-
+const createUser = (e) => {
+    e.preventDefault();
+    let errors = [];
+    if (usernaam.value === "" || usernaam.value == null) {
+        errors.push("Gebruikersnaam is verplicht");
+    }
+    if (email.value === "" || email.value == null) {
+        errors.push("Email is verplicht");
+    }
+    if (paaswoord.value === "" || paaswoord.value == null) {
+        errors.push("Passwoord is verplicht");
+    }
+    if (errors.length > 0) {
+        e.preventDefault();
+        errorblock.innerText = errors.join(", ");
+        errorblock.style.color = "red";
+    } else {
+        errorblock.innerText = "Uw gegevens zijn verstuurd";
+        errorblock.style.color = "green";
+    }
+}
 
 
 
