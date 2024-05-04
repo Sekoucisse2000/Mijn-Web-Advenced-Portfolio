@@ -9,3 +9,8 @@ Web advenced portfolio
 
 Om Event aan een element koppelen:
 https://www.w3schools.com/cssref/pr_class_visibility.php
+
+
+
+Gebruiken van template literals: Met behulp van dit website, ik heb schrijcode van HTMLelement te selecteren en te manupuleren
+https://www.freecodecamp.org/news/template-literals-in-javascript/
