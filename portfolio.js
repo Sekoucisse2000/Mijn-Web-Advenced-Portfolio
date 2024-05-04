@@ -300,6 +300,48 @@ delayMessage().then((message) => {
 });
 
 
+//------------------------------------------------------------------------------------
+
+
+// Asynchrone functie om gegevens van de API op te halen
+const getUsers = async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        if (!response.ok) {
+            throw new Error('Failed to fetch users');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching users:', error);
+        return null;
+    }
+};
+
+// Functie om de gebruikers weer te geven op de webpagina
+const displayUsers = async () => {
+    const userListElement = document.getElementById('userList');
+    const users = await getUsers();
+    if (users) {
+        users.forEach(user => {
+            const userElement = document.createElement('div');
+            userElement.classList.add('user');
+            userElement.innerHTML = `
+                <h2>${user.name}</h2>
+                <p><strong>Username:</strong> ${user.username}</p>
+                <p><strong>Email:</strong> ${user.email}</p>
+                <p><strong>Phone:</strong> ${user.phone}</p>
+            `;
+            userListElement.appendChild(userElement);
+        });
+    } else {
+        userListElement.innerHTML = '<p>Er is een fout opgetreden bij het ophalen van de gebruikers.</p>';
+    }
+};
+
+// Roep de functie aan om de gebruikers weer te geven wanneer de pagina geladen is
+document.addEventListener('DOMContentLoaded', displayUsers);
+
 
 
 
