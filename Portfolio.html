@@ -10,41 +10,94 @@
 
 <body>
     <h1 id="mijn-hooft-tittle"> Mijn Portfolio</h1>
-
     <div class="klik-event box">
-        <h4> Hoeveel componenten zijn er bij defentie?</h4>
+        <h4 class="vraag"> Hoeveel componenten zijn er bij defentie?</h4>
+        <h5>Meer infos <a href="https://www.mil.be/">Mil.be</a></h5>
         <button id="btn-1"> 4 componenten</button>
         <button id="btn-2"> 5 componenten</button>
         <p>zijn 4 componenten bij defentie</p>
     </div>
-    <h2 class="text"> Maak een user account </h2>
+    <h2 class=> Maak een user account </h2>
     <div id="mijnformilier">
         <form action="/" method="GET">
             <div>
                 <label for="Usernaam">Usernaam: </label>
-                <input type="text" id="usernaam" name="usernaam" required>
+                <input type="text" id="usernaam" name="usernaam">
             </div>
             <div>
                 <label for="email">Email: </label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
             </div>
             <div>
                 <label for="password">Password: </label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password">
             </div>
+            <div id="errors">
+            </div>
+
             <button type="submit">Valideren</button>
+
         </form>
-        <div id="errors">
 
+    </div>
+    <div class="bereken-mach">
+        <h2 id="mijnh2">Cirkelberekening</h2>
+        <label for="radiusInput">Voer de straal van de cirkel in: </label>
+        <input type="number" id="radiusInput"> <br> <br>
+        <button onclick="berekenCirkel()">Bereken</button>
+        <p id="resultaat"></p>
+
+    </div>
+    <div class="container">
+        <h2>Begroetingswebapplicatie</h2>
+        <input type="text" id="naamInput" placeholder="Voer uw naam in">
+        <button onclick="begroetGebruiker()">Begroeten</button>
+        <div id="begroetingsBericht"></div>
+
+        <h2>Toevoegen van een taak</h2>
+        <input type="text" id="taakNaam" placeholder="Taaknaam">
+        <input type="text" id="taakBeschrijving" placeholder="Beschrijving">
+        <button onclick="voegTaakToe()">Toevoegen</button>
+        <ul id="takenlijst"></ul>
+    </div>
+
+    <div class="contner">
+        <h2>Boekenlijst Applicatie</h2>
+        <form id="boekFormulier">
+            <input type="text" id="titelInput" placeholder="Titel">
+            <input type="text" id="auteurInput" placeholder="Auteur">
+            <input type="text" id="genreInput" placeholder="Genre">
+            <button type="submit">Voeg toe</button>
+            <h4>Boekenlijst Applicatie</h4>
+            <button onclick="toonBoekenlijst()">Toon Boekenlijst</button><br>
+            <br>
+
+            <h2>Boekenlijst</h2>
+            <ul id="boekenlijst"></ul>
+        </form>
+        <ul id="boekenlijst"></ul>
+    </div>
+
+
+    <div class="section">
+        <div class="sction-2">
+            <div class="container-1">
+                <h4>Arrow Function Example</h4>
+                <button id="greetButton">Say Hello</button>
+                <p id="greetMessage"></p>
+            </div>
+            <div class="container-2">
+                <h4>Callback Function Example</h4>
+                <button id="changeColorButton">Change Background Color</button>
+            </div>
+            <div class="container-3">
+                <h1>User List</h1>
+                <div id="userList"></div>
+            </div>
         </div>
+    </div>
 
-
-
-
-
-
-
-        <script src="portfolio.js"></script>
+    <script src="portfolio.js"></script>
 </body>
 
 </html>
