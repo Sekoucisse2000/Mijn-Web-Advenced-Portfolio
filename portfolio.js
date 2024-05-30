@@ -342,7 +342,80 @@ const displayUsers = async () => {
 // Roep de functie aan om de gebruikers weer te geven wanneer de pagina geladen is
 document.addEventListener('DOMContentLoaded', displayUsers);
 
+//------------------------------------------------------------------------------------
+// Asynchrone functie om gegevens van de API op te halen
+const getMovies = async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        if (!response.ok) {
+            throw new Error('Failed to fetch movies');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching movies:', error);
+        return null;
+    }
+};
 
+// Functie om de films weer te geven op de webpagina
+const displayMovies = async () => {
+    const filmListElement = document.getElementById('filmList');
+    const movies = await getMovies();
+    if (movies) {
+        movies.forEach(movie => {
+            const movieElement = document.createElement('li');
+            movieElement.innerHTML = `
+                <h2>${movie.title}</h2>
+                <p>${movie.body}</p>
+            `;
+            filmListElement.appendChild(movieElement);
+        });
+    } else {
+        filmListElement.innerHTML = '<p>Er is een fout opgetreden bij het ophalen van de films.</p>';
+    }
+};
+
+// Roep de functie aan om de films weer te geven wanneer de pagina geladen is
+//------------------------------------------------------------------------------------
+
+
+
+// Asynchrone functie om gegevens van de API op te halen
+const getMovies = async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        if (!response.ok) {
+            throw new Error('Failed to fetch movies');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching movies:', error);
+        return null;
+    }
+};
+
+
+const displayMovies = async () => {
+    const filmListElement = document.getElementById('filmList');
+    const movies = await getMovies();
+    if (movies) {
+        movies.forEach(movie => {
+            const movieElement = document.createElement('li');
+            movieElement.innerHTML = `
+                <h2>${movie.title}</h2>
+                <p>${movie.body}</p>
+            `;
+            filmListElement.appendChild(movieElement);
+        });
+    } else {
+        filmListElement.innerHTML = '<p>Er is een fout opgetreden bij het ophalen van de films.</p>';
+    }
+};
+
+// Roep de functie aan om de films weer te geven wanneer de pagina geladen is
+document.addEventListener('DOMContentLoaded', displayMovies);
 
 
 
